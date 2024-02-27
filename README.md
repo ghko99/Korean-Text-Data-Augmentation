@@ -1,6 +1,11 @@
 
 # LLM을 활용한 한국어 데이터 증강
 BART, BERT, T5 기반 언어 모델을 활용한 한국어 데이터 증강법
+Environments
+``
+python: 3.8.18
+OS: Window
+```
 ## 1. BART-based Korean Text data Augmentation
 [Korean-CommonGen](https://github.com/J-Seo/Korean-CommonGen) 과 
 [CHEF in the Language Kitchen: A Generative Data Augmentation Leveraging Korean Morpheme Ingredients](https://aclanthology.org/2023.emnlp-main.367/) 
@@ -220,3 +225,11 @@ sh train.sh
 |  (BERT) Random Masking Insertion |   0.9256289601325989  |
 |       (BART) mbart50-large       |   0.9271315336227417  |
 |  (T5) KoT5-paraphrase-generation |   0.915034294128418   |
+
+## 6. Reference
+[K-TACC](https://github.com/kyle-bong/K-TACC)
+[KLUE](https://huggingface.co/datasets/klue)
+[psyche/KoT5-paraphrase-generation](https://huggingface.co/psyche/KoT5-paraphrase-generation/discussions)
+[Data Augmentation using Pre-trained Transformer Models](https://arxiv.org/abs/2003.02245)
+[한국어 상호참조해결을 위한 End-to-end 상호참조해결 모델과 데이터 증강 방법](https://www.dbpia.co.kr/journal/detail?nodeId=T15773139)
+[MLM-data-augmentation](https://github.com/seoyeon9646/MLM-data-augmentation)
