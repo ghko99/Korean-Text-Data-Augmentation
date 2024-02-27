@@ -1,0 +1,56 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-02-04T01:57:11.982051",
+    "startedAt": "2024-02-04T01:57:11.747742",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--config",
+        "random_masking_replacement1_config"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePathLocal": "train.py",
+    "codePath": "sts\\train.py",
+    "git": {
+        "remote": "https://github.com/kyle-bong/K-TACC.git",
+        "commit": "3bcdd41c7fb8afb3860c74e091013702642218f9"
+    },
+    "email": "ghko99@gmail.com",
+    "root": "C:/Users/khko9/Desktop/K-TACC",
+    "host": "DESKTOP-GQRNCJJ",
+    "username": "khko9",
+    "executable": "C:\\Users\\khko9\\anaconda3\\envs\\ktacc\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3701.0,
+        "min": 0.0,
+        "max": 3701.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3701.0,
+            "min": 0.0,
+            "max": 3701.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 464.99272537231445,
+            "used": 380.5865364074707
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4070 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4070 Ti",
+            "memory_total": 12878610432
+        }
+    ],
+    "memory": {
+        "total": 31.74050521850586
+    }
+}

@@ -1,0 +1,33 @@
+2024-02-27 21:10:48,927 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-02-27 21:10:48,927 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Configure stats pid to 5832
+2024-02-27 21:10:48,928 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Loading settings from C:\Users\khko9\.config\wandb\settings
+2024-02-27 21:10:48,928 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Loading settings from c:\Users\khko9\Desktop\augmentation\sts\wandb\settings
+2024-02-27 21:10:48,928 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-02-27 21:10:48,928 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'augmentation\\sts\\train.py', 'program_abspath': 'C:\\Users\\khko9\\Desktop\\augmentation\\sts\\train.py', 'program': 'train.py'}
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_setup.py:_flush():76] Applying login settings: {'mode': 'offline'}
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_init.py:_log_setup():526] Logging user logs to .\wandb\offline-run-20240227_211048-1m9shndo\logs\debug.log
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_init.py:_log_setup():527] Logging internal logs to .\wandb\offline-run-20240227_211048-1m9shndo\logs\debug-internal.log
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_init.py:init():566] calling init triggers
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {}
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_init.py:init():616] starting backend
+2024-02-27 21:10:48,930 INFO    MainThread:5832 [wandb_init.py:init():620] setting up manager
+2024-02-27 21:10:48,931 INFO    MainThread:5832 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-02-27 21:10:48,934 INFO    MainThread:5832 [wandb_init.py:init():628] backend started and connected
+2024-02-27 21:10:48,936 INFO    MainThread:5832 [wandb_init.py:init():720] updated telemetry
+2024-02-27 21:10:49,287 INFO    MainThread:5832 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-02-27 21:10:49,290 INFO    MainThread:5832 [wandb_init.py:init():804] starting run threads in backend
+2024-02-27 21:10:49,408 INFO    MainThread:5832 [wandb_run.py:_console_start():2241] atexit reg
+2024-02-27 21:10:49,408 INFO    MainThread:5832 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-02-27 21:10:49,408 INFO    MainThread:5832 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-02-27 21:10:49,408 INFO    MainThread:5832 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-02-27 21:10:49,409 INFO    MainThread:5832 [wandb_init.py:init():847] run started, returning control to user process
+2024-02-27 21:10:53,319 INFO    MainThread:5832 [wandb_run.py:_config_callback():1343] config_cb None None {'cfg/path/train_path': 'datasets/klue-sts-v1.1_train_mbart_augset.json', 'cfg/path/dev_path': 'datasets/klue-sts-v1.1_dev.json', 'cfg/path/test_path': 'datasets/klue-sts-v1.1_dev.json', 'cfg/data/shuffle': True, 'cfg/data/augmentation': True, 'cfg/data/max_length': 128, 'cfg/model/model_name': 'klue/roberta-base', 'cfg/model/saved_name': 'mbart_model', 'cfg/train/seed': 42, 'cfg/train/batch_size': 32, 'cfg/train/max_epoch': 4, 'cfg/train/learning_rate': 5e-05, 'cfg/train/logging_step': 100, 'cfg/train/drop_out': 0.1, 'cfg/train/warmup_ratio': 0.1, 'cfg/train/weight_decay': 0.01, 'cfg/runner/options/num_workers': 8}
+2024-02-27 21:17:55,442 INFO    MainThread:5832 [wandb_run.py:_config_callback():1343] config_cb None None {'cfg/path/train_path': 'datasets/klue-sts-v1.1_train_mbart_augset.json', 'cfg/path/dev_path': 'datasets/klue-sts-v1.1_dev.json', 'cfg/path/test_path': 'datasets/klue-sts-v1.1_dev.json', 'cfg/data/shuffle': True, 'cfg/data/augmentation': True, 'cfg/data/max_length': 128, 'cfg/model/model_name': 'klue/roberta-base', 'cfg/model/saved_name': 'mbart_model', 'cfg/train/seed': 42, 'cfg/train/batch_size': 32, 'cfg/train/max_epoch': 4, 'cfg/train/learning_rate': 5e-05, 'cfg/train/logging_step': 100, 'cfg/train/drop_out': 0.1, 'cfg/train/warmup_ratio': 0.1, 'cfg/train/weight_decay': 0.01, 'cfg/runner/options/num_workers': 8}
+2024-02-27 21:17:56,447 INFO    MainThread:5832 [wandb_run.py:_finish():1970] finishing run korean_linguistic_augmentation/1m9shndo
+2024-02-27 21:17:56,448 INFO    MainThread:5832 [wandb_run.py:_atexit_cleanup():2210] got exitcode: 0
+2024-02-27 21:17:56,448 INFO    MainThread:5832 [wandb_run.py:_restore():2193] restore
+2024-02-27 21:17:56,448 INFO    MainThread:5832 [wandb_run.py:_restore():2199] restore done
+2024-02-27 21:17:57,505 INFO    MainThread:5832 [wandb_run.py:_footer_history_summary_info():3866] rendering history
+2024-02-27 21:17:57,506 INFO    MainThread:5832 [wandb_run.py:_footer_history_summary_info():3898] rendering summary
