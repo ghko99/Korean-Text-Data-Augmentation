@@ -16,7 +16,7 @@ def is_korean(text):
             return False
     return True
 
-# 후보토큰 선정 (한국어이면서, 원본 토큰과 다른고 후보토큰 앞뒤로 반복이 없어야함) 
+# 후보토큰 선정 (한국어이면서, 원본 토큰과 다르고 후보토큰 앞뒤로 반복이 없어야함) 
 def candidate_filtering(tokenizer,
                         input_ids:list,
                         idx:int,
