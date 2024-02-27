@@ -4,7 +4,7 @@ BART, BERT, T5 기반 언어 모델을 활용한 한국어 데이터 증강법
 Environments
 ```
 python: 3.8.18
-OS: Window
+OS: Windows 11
 ```
 ## 1. BART-based Korean Text data Augmentation
 [Korean-CommonGen](https://github.com/J-Seo/Korean-CommonGen) 과 
@@ -227,9 +227,9 @@ sh train.sh
 |  (T5) KoT5-paraphrase-generation |   0.915034294128418   |
 
 ## 6. Reference
-[K-TACC](https://github.com/kyle-bong/K-TACC)
-[KLUE](https://huggingface.co/datasets/klue)
-[psyche/KoT5-paraphrase-generation](https://huggingface.co/psyche/KoT5-paraphrase-generation/discussions)
-[Data Augmentation using Pre-trained Transformer Models](https://arxiv.org/abs/2003.02245)
-[한국어 상호참조해결을 위한 End-to-end 상호참조해결 모델과 데이터 증강 방법](https://www.dbpia.co.kr/journal/detail?nodeId=T15773139)
-[MLM-data-augmentation](https://github.com/seoyeon9646/MLM-data-augmentation)
+* [K-TACC](https://github.com/kyle-bong/K-TACC)
+* [KLUE](https://huggingface.co/datasets/klue)
+* [psyche/KoT5-paraphrase-generation](https://huggingface.co/psyche/KoT5-paraphrase-generation/discussions)
+* [Data Augmentation using Pre-trained Transformer Models](https://arxiv.org/abs/2003.02245)
+* [한국어 상호참조해결을 위한 End-to-end 상호참조해결 모델과 데이터 증강 방법](https://www.dbpia.co.kr/journal/detail?nodeId=T15773139)
+* [MLM-data-augmentation](https://github.com/seoyeon9646/MLM-data-augmentation)
