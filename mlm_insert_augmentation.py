@@ -37,8 +37,8 @@ def mlm_insert_augment(sent,model,tokenizer,ratio):
     return copied
 
 if __name__ == "__main__":
-    model = AutoModelForMaskedLM.from_pretrained('./model/snu').cuda()
-    tokenizer = AutoTokenizer.from_pretrained('./model/snu')
+    model = AutoModelForMaskedLM.from_pretrained("ghko99/KR-ELECTRA-generator-for-aug").cuda()
+    tokenizer = AutoTokenizer.from_pretrained("ghko99/KR-ELECTRA-generator-for-aug")
     sents,_ = get_sents()
     mapping = dict()
     for sent in tqdm(sents):
