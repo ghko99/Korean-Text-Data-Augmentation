@@ -81,8 +81,8 @@ def mlm_replace_augment(model,tokenizer,sent,mlm_prob):
 if __name__ == "__main__":
 
     train_sents ,valid_sents = get_sents()
-    tokenizer = AutoTokenizer.from_pretrained('./model/snu')
-    model = AutoModelForMaskedLM.from_pretrained('./model/snu').cuda()
+    tokenizer = AutoTokenizer.from_pretrained("ghko99/KR-ELECTRA-generator-for-aug")
+    model = AutoModelForMaskedLM.from_pretrained("ghko99/KR-ELECTRA-generator-for-aug").cuda()
 
     mapping = dict()
     for sent in tqdm(train_sents):
