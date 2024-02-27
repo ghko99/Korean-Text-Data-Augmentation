@@ -234,3 +234,4 @@ BART와 BERT의 Random Masking Insertion 증강법이 STS에서 가장 높은 �
 * [Data Augmentation using Pre-trained Transformer Models](https://arxiv.org/abs/2003.02245)
 * [한국어 상호참조해결을 위한 End-to-end 상호참조해결 모델과 데이터 증강 방법](https://www.dbpia.co.kr/journal/detail?nodeId=T15773139)
 * [MLM-data-augmentation](https://github.com/seoyeon9646/MLM-data-augmentation)
+* [monologg/koelectra-base-v3-discriminator](https://huggingface.co/monologg/koelectra-base-v3-discriminator)
