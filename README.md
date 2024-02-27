@@ -226,6 +226,7 @@ sh train.sh
 |       (BART) mbart50-large       |   0.9271315336227417  |
 |  (T5) KoT5-paraphrase-generation |   0.915034294128418   |
 
+BART와 BERT의 Random Masking Insertion 증강법이 STS에서 가장 높은 성능을 보여주는것으로 보임.
 ## 6. Reference
 * [K-TACC](https://github.com/kyle-bong/K-TACC)
 * [KLUE](https://huggingface.co/datasets/klue)
