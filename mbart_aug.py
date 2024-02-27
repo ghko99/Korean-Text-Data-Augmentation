@@ -9,7 +9,7 @@ from mbart_data import get_sents
 
 class DataGenerateArguments:
     sent_max_len = 128
-    model_name_or_path = './model/mbart'
+    model_name_or_path = "ghko99/mbart50-large-for-aug"
     batch_size = 8
     num_beams = 10
     no_repeat_ngram_size=3
