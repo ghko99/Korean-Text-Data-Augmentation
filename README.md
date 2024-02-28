@@ -86,18 +86,18 @@ BERT의 MLM(Masked Language Model)은 문맥을 고려한 유의어 교체의 �
 [한국어 상호참조해결을 위한 End-to-end 상호참조해결 모델과 데이터 증강 방법](https://www.dbpia.co.kr/journal/detail?nodeId=T15773139)에서는 한국어 데이터에서 BERT의 Random Masking Replacement를 활용.<br>
 코드의 상당부분은 [MLM-data-augmentation](https://github.com/seoyeon9646/MLM-data-augmentation)을 참고함.
 
-### 2.1 BERT의 Masked Language Model을 활용한 데이터 증강 (Random Masking Insertion).
+### 2.2 BERT의 Masked Language Model을 활용한 데이터 증강 (Random Masking Insertion).
 [K-TACC(Korean Text Augmentation Considering Context)](https://github.com/kyle-bong/K-TACC)에서는 BERT의 Masked Language Model을 활용해 Random Insertion(Random Masking Insertion)을 구현함. <br>
 기존 Replacement의 경우 반의어로 교체하는 경우가 있기 때문에 의미보존이 힘들고, 한국어 토큰화 기법의 특성으로 인해 어색한 문장이 여전히 존재함. <br>
 하지만 한국어는 영어에 비해 어순이 유연하기 때문에 문맥을 알 수 있다면 단어 사이에 들어갈만한 토큰을 찾기가 쉬움. 따라서 Masked Language Model을 활용할 경우 특정 토큰을 [MASK]토큰으로 대체하는 것 보다 기존 토큰들은 유지한채 삽입하는것이 더욱 의미보존이 가능하며 자연스러운 문장이 나오기 쉬움.<br>
-### 2.2 Data Augmentation algorithm (Random Masking Replacement)
-#### 2.2.1 Pre-training
+### 2.3 Data Augmentation algorithm (Random Masking Replacement)
+#### 2.3.1 Pre-training
 ![mlm_pretrained](https://github.com/ghko99/korean-augmentation/assets/115913818/cb40497d-6efe-43f7-a305-a7b1f7eb0f07)
-#### 2.2.2 How to pretrain model
+#### 2.3.2 How to pretrain model
 ```
 python mlm_train.py
 ```
-#### 2.2.3 Pre-trained Model
+#### 2.3.3 Pre-trained Model
 🤗 [ghko99/KR-ELECTRA-generator-for-aug](https://huggingface.co/ghko99/KR-ELECTRA-generator-for-aug)
 ```python
 from transformers import AutoTokenizer, AutoModelForMaskedLM
@@ -105,10 +105,10 @@ from transformers import AutoTokenizer, AutoModelForMaskedLM
 tokenizer = AutoTokenizer.from_pretrained("ghko99/KR-ELECTRA-generator-for-aug")
 model = AutoModelForMaskedLM.from_pretrained("ghko99/KR-ELECTRA-generator-for-aug")
 ```
-#### 2.2.4 Random Masking Replacement
+#### 2.3.4 Random Masking Replacement
 
 ![mlm](https://github.com/ghko99/korean-augmentation/assets/115913818/a14b309d-7b24-4c19-b562-01c9ceeeebe6)
-#### 2.2.5 Usage
+#### 2.3.5 Usage
 ```python
 from mlm_augmentation import mlm_replace_augment
 from transformers import AutoModelForMaskedLM,AutoTokenizer
@@ -120,16 +120,16 @@ sent = "무엇보다도 호스트분들이 너무 친절하셨습니다."
 aug_sent = mlm_replace_augment(model=model,tokenizer=tokenizer,sent=sent,mlm_prob=0.15)
 print(aug_sent)
 ```
-#### 2.2.6 Example Output
+#### 2.3.6 Example Output
 ```
 >>> 무엇보다도 호스트분이 매우 친절하셨습니다.
 ```
-### 2.3 Data Augmentation algorithm (Random Masking Insertion)
-#### 2.3.1 Random Masking Insertion
+### 2.4 Data Augmentation algorithm (Random Masking Insertion)
+#### 2.4.1 Random Masking Insertion
 
 ![rmi](https://github.com/ghko99/korean-augmentation/assets/115913818/a132f064-a49e-44b5-9d86-88eb676873b8)
 앞서 pretrained된 모델을 사용해 Random Masking Insertion을 수행
-#### 2.3.2 Usage
+#### 2.4.2 Usage
 ```python
 from mlm_insert_augmentation import mlm_insert_augment
 from transformers import AutoModelForMaskedLM,AutoTokenizer
@@ -141,7 +141,7 @@ sent = "무엇보다도 호스트분들이 너무 친절하셨습니다."
 aug_sent = mlm_insert_augment(model=model,tokenizer=tokenizer,sent=sent,ratio=0.15)
 print(aug_sent)
 ```
-#### 2.3.2 Example Output
+#### 2.4.3 Example Output
 ```
 >>> 무엇보다도 호스트분들이 정말 너무 친절하셨습니다.
 ```
