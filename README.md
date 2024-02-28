@@ -169,22 +169,14 @@ print(aug_sents)
 
 ## 4. Augmentation sample files
 [KLUE](https://huggingface.co/datasets/klue)의 Semantic Text Similarity(STS) 데이터셋을 4가지 증강방식으로 1:1 비율(2배)로 증강함. <br><br>
-Random Masking Replacement 증강 sample 파일:
-```
-mapping_electra.json
-```
-Random Masking Insertion 증강 sample 파일:
-```
-mapping_insert.json
-```
-mbart50-large 증강 sample 파일:
-```
-mapping_mbart.json
-```
-t5 증강 sample 파일:
-```
-mapping_t5.json
-```
+Random Masking Replacement 증강 sample 파일: 
+[mapping_electra.json](https://github.com/ghko99/Korean-Text-Data-Augmentation/blob/master/data/mapping_electra.json)<br>
+Random Masking Insertion 증강 sample 파일: 
+[mapping_insert.json](https://github.com/ghko99/Korean-Text-Data-Augmentation/blob/master/data/mapping_insert.json)<br>
+mbart50-large 증강 sample 파일: 
+[mapping_mbart.json](https://github.com/ghko99/Korean-Text-Data-Augmentation/blob/master/data/mapping_mbart.json)<br>
+t5 증강 sample 파일: 
+[mapping_t5.json](https://github.com/ghko99/Korean-Text-Data-Augmentation/blob/master/data/mapping_t5.json)<br>
 ## 5. Augmentation 성능 측정
 [K-TACC](https://github.com/kyle-bong/K-TACC)의 STS 성능 측정 코드를 활용해 데이터 증강의 성능 측정을 진행함. <br>
 baseline model은 [monologg/koelectra-base-v3-discriminator](https://huggingface.co/monologg/koelectra-base-v3-discriminator)을 활용했음.
