@@ -59,7 +59,7 @@ def mbart_augment(sent_list):
 
     dataset = Dataset(concept_sets,labels,tokenizer,gen_args.sent_max_len)
     dataloader = DataLoader(dataset,batch_size=gen_args.batch_size,shuffle=False)
-
+    aug_sent_list = []
     for batch in tqdm(dataloader):
         b_input_ids, b_attn_mask,b_label = batch[0],batch[1],batch[2]
         with torch.no_grad():
@@ -78,11 +78,14 @@ def mbart_augment(sent_list):
                 output = tokenizer.decode(beam_output,skip_special_tokens=True)
                 output_sents.append(output)
             res[label]=output_sents
+            aug_sent_list.append(output_sents)
+    
 
         # save mbart augmentation results
         with open('./data/mapping_mbart.json','w',encoding='utf-8-sig') as f:
             json.dump(res,f,ensure_ascii=False,indent='\t')
         f.close()
+    return aug_sent_list
 
 if __name__ == "__main__":
     sents, _ = get_sents()
