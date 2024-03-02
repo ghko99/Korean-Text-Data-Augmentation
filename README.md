@@ -57,6 +57,8 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 tokenizer = AutoTokenizer.from_pretrained("ghko99/mbart50-large-for-aug")
 model = AutoModelForSeq2SeqLM.from_pretrained("ghko99/mbart50-large-for-aug")
 ```
+![스크린샷 2024-03-02 122036](https://github.com/ghko99/Korean-Text-Data-Augmentation/assets/115913818/aa2376ef-7439-403b-890d-c43b5b5b00fd)
+
 ### 1.5 Usage 
 ```python
 from mbart_aug import mbart_augment
