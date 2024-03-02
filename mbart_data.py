@@ -9,16 +9,14 @@ def Extract_Morpheme(sentence):
     extract_morphs = ['NNG','NNP', 'NNB','NNBC','NR','NP',
                 'VV','VA','VCP','VCN','VX','SN', 'MM']
     concept_set = []
-    morphs_set = []
+
     mecab_pos = mecab.pos(sentence)
     for pos in mecab_pos:
         split_pos = pos[1].split('+')
         if pos[1] in extract_morphs:
             concept_set.append(pos[0])
-            morphs_set.append(pos[1])
         elif split_pos[0][0] == 'V' and split_pos[1][0] == 'E':
             concept_set.append(pos[0])
-            morphs_set.append(pos[1])
     return '#'.join(concept_set)
 
 # mbart train을 위한 dataset 저장
