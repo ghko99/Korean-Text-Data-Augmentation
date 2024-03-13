@@ -1,6 +1,6 @@
 
 # LLM을 활용한 한국어 데이터 증강
-BART, BERT, T5 기반 언어 모델을 활용한 한국어 데이터 증강법
+BART, BERT, T5 기반 언어 모델을 활용한 한국어 데이터 증강법 <br>
 Environments
 ```
 python: 3.8.18
