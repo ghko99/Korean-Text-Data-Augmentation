@@ -17,7 +17,8 @@ OS: Windows 11
 해당 특성을 이용해 BART기반 한국어 데이터 증강을 구현할 수있음.
 
 ### 1.1 Data Augmentation algorithm
-![chef](https://github.com/ghko99/korean-augmentation/assets/115913818/b4638235-996a-4403-943c-7b0e54e56be5)
+![Bart_based_chef](https://github.com/user-attachments/assets/7b00120e-5871-4b0e-bcda-49bec1cf91b9)
+
 
 mecab 형태소 분석기 활용해 어휘 형태소 set을 생성후, mbart-large 모델로 학습.
 ### 1.2 How to train mbart model
@@ -128,8 +129,8 @@ print(aug_sent)
 ```
 ### 2.4 Data Augmentation algorithm (Random Masking Insertion)
 #### 2.4.1 Random Masking Insertion
+![bert_base_rmi](https://github.com/user-attachments/assets/a1572d68-4a29-4ed3-bb21-2536db33c0a5)
 
-![rmi](https://github.com/ghko99/korean-augmentation/assets/115913818/a132f064-a49e-44b5-9d86-88eb676873b8)
 앞서 pretrained된 모델을 사용해 Random Masking Insertion을 수행
 #### 2.4.2 Usage
 ```python
